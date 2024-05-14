@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="Quick Send"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/illustration" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="-10dp"
+                android:orientation="vertical">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    app:ccpDialog_cornerRadius="18dp"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_defaultNameCode="IND"
+                    app:ccp_showFlag="true"
+                    app:ccp_showFullName="true"
+                    app:ccp_showNameCode="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edMobileLayout"
+                    style="?attr/textInputFilledStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:hint="Mobile Number"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="#C2F140"
+                    app:boxStrokeWidth="4dp"
+                    app:boxStrokeWidthFocused="4dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:counterTextColor="@color/white"
+                    app:cursorColor="#C2F140"
+                    app:cursorErrorColor="#ff0000"
+                    app:errorTextColor="#ff0000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="?attr/textInputFilledStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:hint="Message"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="#C2F140"
+                    app:boxStrokeWidth="4dp"
+                    app:boxStrokeWidthFocused="4dp"
+                    app:cursorColor="#C2F140">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|text|textMultiLine|textLongMessage"
+                        android:maxLines="4"
+                        android:minLines="2"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBtnWhatsapp"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        android:clickable="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="11dp"
+                        app:cardUseCompatPadding="true">
+
+                        <ImageView
+                            android:id="@+id/imgWhatsapp"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo_whatsapp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBtnTelegram"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        android:clickable="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="11dp"
+                        app:cardUseCompatPadding="true">
+
+                        <ImageView
+                            android:id="@+id/im1"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo_telegram" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

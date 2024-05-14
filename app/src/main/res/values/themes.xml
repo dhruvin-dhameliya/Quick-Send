@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuickSend" parent="Theme.Material3.DynamicColors.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.QuickSend" parent="Base.Theme.QuickSend" />
+</resources>
